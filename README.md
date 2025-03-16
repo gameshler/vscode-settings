@@ -2,7 +2,7 @@
 
 # Font
 
-* [Anonymous Pro](https://www.marksimonson.com/fonts/view/anonymous-pro)
+* Operator Mono Lig
 
 ## Themes/Color
 
