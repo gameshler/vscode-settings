@@ -1,13 +1,13 @@
 # VS Code Settings
 
-# Font
+## Font
 
-* Operator Mono Lig
+- Operator Mono Lig
 
 ## Themes/Color
 
-* [Just Black](https://marketplace.visualstudio.com/items?itemName=nur.just-black)
-  * See [`editor.tokenColorCustomizations`](#settings) in my VS Code settings for a few modifications I make to the theme.
+- [Just Black](https://marketplace.visualstudio.com/items?itemName=nur.just-black)
+  - See [`editor.tokenColorCustomizations`](#settings) in my VS Code settings for a few modifications I make to the theme.
 
 ## Extensions
 
@@ -62,16 +62,10 @@ redhat.java
 oracle.oracle-java
 ```
 
-# Settings
+## Settings
 
 ```json
 {
-  "codesnap.backgroundColor": "#000000",
-  "codesnap.containerPadding": "0px",
-  "codesnap.showWindowControls": false,
-  "codesnap.transparentBackground": true,
-  "cSpell.enabled": true,
-  "cSpell.enableFiletypes": ["mdx"],
   "diffEditor.ignoreTrimWhitespace": false,
   "editor.detectIndentation": true,
   "editor.fontFamily": "Operator Mono Lig",
@@ -132,14 +126,14 @@ oracle.oracle-java
     "**/node_modules": true
   },
   "search.useIgnoreFiles": false,
-  "svelte.enable-ts-plugin": true,
+
   "terminal.integrated.fontSize": 14,
-  "vsicons.dontShowNewVersionMessage": true,
+
   "window.zoomLevel": 4,
   "workbench.colorTheme": "Just Black",
   "workbench.editor.labelFormat": "medium",
   "workbench.editor.showTabs": "none",
-  "workbench.iconTheme": "vscode-icons",
+  "workbench.iconTheme": "material-icon-theme",
   "workbench.sideBar.location": "right",
   "workbench.startupEditor": "newUntitledFile",
   "workbench.statusBar.visible": false,
@@ -170,16 +164,15 @@ oracle.oracle-java
   "[scss]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "[svelte]": {
-    "editor.defaultFormatter": "svelte.svelte-vscode"
-  },
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
+  "telemetry.feedback.enabled": false,
+  "database-client.autoSync": true
 }
-
 ```
-
