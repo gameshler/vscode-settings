@@ -173,6 +173,8 @@ oracle.oracle-java
   "editor.formatOnSave": true,
   "editor.formatOnType": true,
   "telemetry.feedback.enabled": false,
-  "database-client.autoSync": true
+  "database-client.autoSync": true,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.compactFolders": false
 }
 ```
