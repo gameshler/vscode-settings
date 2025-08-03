@@ -8,6 +8,8 @@
 
 - [Just Black](https://marketplace.visualstudio.com/items?itemName=nur.just-black)
   - See [`editor.tokenColorCustomizations`](#settings) in my VS Code settings for a few modifications I make to the theme.
+- [Github Light Theme](https://marketplace.visualstudio.com/items?itemName=Hyzeta.vscode-theme-github-light)
+  - See [`editor.tokenColorCustomizations`](#settings) in my VS Code settings for a few modifications I make to the theme.
 
 ## Extensions
 
@@ -130,7 +132,7 @@ oracle.oracle-java
   "terminal.integrated.fontSize": 14,
 
   "window.zoomLevel": 4,
-  "workbench.colorTheme": "Just Black",
+  "workbench.colorTheme": "Github Light Theme",
   "workbench.editor.labelFormat": "medium",
   "workbench.editor.showTabs": "none",
   "workbench.iconTheme": "material-icon-theme",
@@ -168,6 +170,9 @@ oracle.oracle-java
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[python]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "editor.formatOnSave": true,
