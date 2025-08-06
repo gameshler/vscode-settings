@@ -68,20 +68,57 @@ oracle.oracle-java
 
 ```json
 {
-  "diffEditor.ignoreTrimWhitespace": false,
-  "editor.detectIndentation": true,
-  "editor.fontFamily": "Operator Mono Lig",
+  // === Editor Core ===
+  "editor.fontFamily": "Operator Mono Lig, JetBrains Mono, Fira Code, monospace",
   "editor.fontLigatures": true,
-  "editor.fontSize": 13,
-  "editor.formatOnPaste": false,
-  "editor.inlineSuggest.enabled": true,
-  "editor.lineHeight": 0,
-  "editor.linkedEditing": true,
-  "editor.minimap.enabled": false,
-  "editor.multiCursorModifier": "ctrlCmd",
-  "editor.snippetSuggestions": "top",
-  "editor.suggestSelection": "first",
+  "editor.fontSize": 14,
+  "editor.lineHeight": 24,
+  "editor.letterSpacing": 0.5,
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.cursorBlinking": "solid",
   "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": false,
+  "editor.renderWhitespace": "boundary",
+  "editor.renderFinalNewline": "on",
+  "editor.trimAutoWhitespace": true,
+  "editor.renderLineHighlight": "all",
+
+  // === Suggestions & Productivity ===
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": false,
+    "strings": true
+  },
+  "editor.suggestSelection": "first",
+  "editor.suggest.snippetsPreventQuickSuggestions": false,
+  "editor.snippetSuggestions": "top",
+  "editor.parameterHints.enabled": true,
+  "editor.inlineSuggest.enabled": true,
+  "editor.hover.enabled": true,
+
+  // === Formatting & Code Style ===
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
+  "editor.formatOnPaste": false,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+
+  // === Visual Tweaks ===
+  "editor.minimap.enabled": false,
+  "editor.glyphMargin": false,
+  "editor.scrollBeyondLastLine": false,
+  "editor.smoothScrolling": false,
+  "workbench.editor.showTabs": "none",
+  "workbench.statusBar.visible": false,
+  "workbench.sideBar.location": "right",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.colorTheme": "Just Black",
+  "window.zoomLevel": 2,
+  "editor.unicodeHighlight.invisibleCharacters": false,
+
+  // === Token Customization ===
   "editor.tokenColorCustomizations": {
     "textMateRules": [
       {
@@ -94,27 +131,51 @@ oracle.oracle-java
         "scope": ["comment", "comment.block"],
         "settings": {
           "fontStyle": "italic",
-          "foreground": "#F5F"
+          "foreground": "#7f7f7f"
         }
       },
       {
         "name": "envKeys",
-        "scope": "string.quoted.double.env,source.env,constant.numeric.env",
+        "scope": [
+          "string.quoted.double.env",
+          "source.env",
+          "constant.numeric.env"
+        ],
         "settings": {
           "foreground": "#3099e4"
         }
       }
     ]
   },
-  "editor.unicodeHighlight.invisibleCharacters": false,
-  "emmet.showAbbreviationSuggestions": false,
-  "eslint.enable": true,
-  "eslint.validate": ["vue", "react", "typescript", "html", "javascript"],
-  "explorer.openEditors.visible": 1,
-  "extensions.ignoreRecommendations": true,
+
+  // === Terminal ===
+  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.cursorStyle": "line",
+  "terminal.integrated.cursorBlinking": false,
+
+  // === Git ===
   "git.autofetch": true,
+  "git.confirmSync": false,
   "git.openRepositoryInParentFolders": "never",
-  "markdown.preview.fontSize": 36,
+
+  // === Files ===
+  "files.autoSave": "off",
+  "files.exclude": {
+    "**/.git": true,
+    "**/.DS_Store": true,
+    "**/node_modules": true,
+    "**/dist": true
+  },
+
+  // === Search ===
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/*.code-search": true
+  },
+  "search.useIgnoreFiles": true,
+
+  // === Screencast Mode===
   "screencastMode.keyboardOptions": {
     "showCommandGroups": false,
     "showCommands": false,
@@ -122,30 +183,27 @@ oracle.oracle-java
     "showKeys": false,
     "showSingleEditorCursorMoves": true
   },
-  "search.exclude": {
-    "**/*.code-search": true,
-    "**/bower_components": true,
-    "**/node_modules": true
-  },
-  "search.useIgnoreFiles": false,
 
-  "terminal.integrated.fontSize": 14,
+  // === Telemetry / Privacy ===
+  "telemetry.telemetryLevel": "off",
+  "telemetry.feedback.enabled": false,
 
-  "window.zoomLevel": 4,
-  "workbench.colorTheme": "Github Light Theme",
-  "workbench.editor.labelFormat": "medium",
-  "workbench.editor.showTabs": "none",
-  "workbench.iconTheme": "material-icon-theme",
-  "workbench.sideBar.location": "right",
-  "workbench.startupEditor": "newUntitledFile",
-  "workbench.statusBar.visible": false,
-  "[css]": {
+  // === ESLint / Prettier ===
+  "eslint.enable": true,
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "vue",
+    "html"
+  ],
+
+  // === Formatting by Language ===
+  "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "[handlebars]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[html]": {
+  "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[javascript]": {
@@ -160,26 +218,33 @@ oracle.oracle-java
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "[markdown]": {
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[scss]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[typescriptreact]": {
+  "[markdown]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[python]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "editor.formatOnSave": true,
-  "editor.formatOnType": true,
-  "telemetry.feedback.enabled": false,
-  "database-client.autoSync": true,
+  "[handlebars]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  // === Extensions / Explorer ===
+  "extensions.ignoreRecommendations": true,
+  "explorer.openEditors.visible": 9,
   "explorer.confirmDragAndDrop": false,
-  "explorer.compactFolders": false
+  "explorer.compactFolders": true,
+
+  // === Database Clients ===
+  "database-client.autoSync": true
 }
+
 ```
