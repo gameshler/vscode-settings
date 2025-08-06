@@ -241,7 +241,7 @@ oracle.oracle-java
   "extensions.ignoreRecommendations": true,
   "explorer.openEditors.visible": 9,
   "explorer.confirmDragAndDrop": false,
-  "explorer.compactFolders": true,
+  "explorer.compactFolders": false,
 
   // === Database Clients ===
   "database-client.autoSync": true
